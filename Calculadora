@@ -1,0 +1,88 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "toc_visible": true,
+      "authorship_tag": "ABX9TyOL/haWhs91pEruYRKoVU86",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ElisangelaRosa/Primeiro-Projeto/blob/main/Calculadora\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QMzGhLt6KBta",
+        "outputId": "7da4f886-0192-4109-934b-2851eae492a7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o primeiro número: 5\n",
+            "Digite o segundo número: 5\n",
+            "Escolha a operação:\n",
+            "1. Soma\n",
+            "2. Subtração\n",
+            "3. Multiplicação\n",
+            "4. Divisão\n",
+            "Digite o número da operação: 1\n",
+            "Resultado: 10.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "def calculadora(num1, num2, operacao):\n",
+        "    if operacao == 1:\n",
+        "        return num1 + num2\n",
+        "    elif operacao == 2:\n",
+        "        return num1 - num2\n",
+        "    elif operacao == 3:\n",
+        "        return num1 * num2\n",
+        "    elif operacao == 4:\n",
+        "        if num2 != 0:  # Evita divisão por zero\n",
+        "            return num1 / num2\n",
+        "        else:\n",
+        "            return \"Divisão por zero não é permitida\"\n",
+        "    else:\n",
+        "        return \"Operação inválida\"\n",
+        "\n",
+        "# Exemplos de uso\n",
+        "numero1 = float(input(\"Digite o primeiro número: \"))\n",
+        "numero2 = float(input(\"Digite o segundo número: \"))\n",
+        "print(\"Escolha a operação:\")\n",
+        "print(\"1. Soma\")\n",
+        "print(\"2. Subtração\")\n",
+        "print(\"3. Multiplicação\")\n",
+        "print(\"4. Divisão\")\n",
+        "operacao = int(input(\"Digite o número da operação: \"))\n",
+        "\n",
+        "resultado = calculadora(numero1, numero2, operacao)\n",
+        "print(\"Resultado:\", resultado)\n"
+      ]
+    }
+  ]
+}
