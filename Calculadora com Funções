@@ -1,0 +1,113 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyO8qe53NQg2BYBErpN426Rj",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ElisangelaRosa/Primeiro-Projeto/blob/main/Calculadora%20com%20Fun%C3%A7%C3%B5es\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "82lCccFiOSku",
+        "outputId": "02b548be-66b8-4290-def2-6827a3c7b3b7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Operações disponíveis:\n",
+            "1: Soma\n",
+            "2: Subtração\n",
+            "3: Multiplicação\n",
+            "4: Divisão\n",
+            "0: Sair\n",
+            "Digite o número da operação desejada: 2\n",
+            "Digite o primeiro valor: 50\n",
+            "Digite o segundo valor: 3\n",
+            "Resultado: 47.0\n",
+            "Operações disponíveis:\n",
+            "1: Soma\n",
+            "2: Subtração\n",
+            "3: Multiplicação\n",
+            "4: Divisão\n",
+            "0: Sair\n"
+          ]
+        }
+      ],
+      "source": [
+        "def soma(a, b):\n",
+        "    return a + b\n",
+        "\n",
+        "def subtracao(a, b):\n",
+        "    return a - b\n",
+        "\n",
+        "def multiplicacao(a, b):\n",
+        "    return a * b\n",
+        "\n",
+        "def divisao(a, b):\n",
+        "    if b != 0:\n",
+        "        return a / b\n",
+        "    else:\n",
+        "        return \"Divisão por zero não é permitida.\"\n",
+        "\n",
+        "while True:\n",
+        "    print(\"Operações disponíveis:\")\n",
+        "    print(\"1: Soma\")\n",
+        "    print(\"2: Subtração\")\n",
+        "    print(\"3: Multiplicação\")\n",
+        "    print(\"4: Divisão\")\n",
+        "    print(\"0: Sair\")\n",
+        "\n",
+        "    opcao = input(\"Digite o número da operação desejada: \")\n",
+        "\n",
+        "    if opcao == \"0\":\n",
+        "        print(\"Saindo...\")\n",
+        "        break\n",
+        "    elif opcao in [\"1\", \"2\", \"3\", \"4\"]:\n",
+        "        num1 = float(input(\"Digite o primeiro valor: \"))\n",
+        "        num2 = float(input(\"Digite o segundo valor: \"))\n",
+        "\n",
+        "        if opcao == \"1\":\n",
+        "            resultado = soma(num1, num2)\n",
+        "            print(\"Resultado:\", resultado)\n",
+        "        elif opcao == \"2\":\n",
+        "            resultado = subtracao(num1, num2)\n",
+        "            print(\"Resultado:\", resultado)\n",
+        "        elif opcao == \"3\":\n",
+        "            resultado = multiplicacao(num1, num2)\n",
+        "            print(\"Resultado:\", resultado)\n",
+        "        elif opcao == \"4\":\n",
+        "            resultado = divisao(num1, num2)\n",
+        "            print(\"Resultado:\", resultado)\n",
+        "    else:\n",
+        "        print(\"Essa opção não existe.\")\n"
+      ]
+    }
+  ]
+}
